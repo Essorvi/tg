@@ -344,8 +344,8 @@ function App() {
           </div>
         )}
 
-        {/* Search Tab */}
-        {activeTab === 'search' && (
+        {/* Test Search Tab */}
+        {activeTab === 'test' && (
           <div className="space-y-6">
             <h2 className="text-2xl font-bold text-gray-800">Test Search</h2>
 
