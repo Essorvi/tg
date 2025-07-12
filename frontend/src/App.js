@@ -111,7 +111,7 @@ function App() {
       <nav className="bg-white shadow-md">
         <div className="container mx-auto px-4">
           <div className="flex space-x-8">
-            {['dashboard', 'users', 'searches', 'search', 'manage'].map((tab) => (
+            {['dashboard', 'users', 'searches', 'test', 'manage'].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
