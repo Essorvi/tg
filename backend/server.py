@@ -609,6 +609,18 @@ async def api_search(query: str = Query(...)):
             params={"q": query},
             timeout=30
         )
+        
+        # Handle different response status codes
+        if response.status_code == 400:
+            # Bad request - likely invalid query format
+            return {
+                "status": "error",
+                "error": {
+                    "code": "INVALID_QUERY",
+                    "message": f"Invalid search query format. Please use phone numbers (+79123456789), emails, or names."
+                }
+            }
+        
         response.raise_for_status()
         return response.json()
     except requests.exceptions.RequestException as e:
