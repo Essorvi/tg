@@ -201,7 +201,7 @@ function App() {
                   View Searches
                 </button>
                 <button
-                  onClick={() => setActiveTab('search')}
+                  onClick={() => setActiveTab('test')}
                   className="bg-purple-500 hover:bg-purple-600 text-white font-medium py-2 px-4 rounded-md"
                 >
                   Test Search
